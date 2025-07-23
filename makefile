@@ -37,8 +37,8 @@ CPPFLAGS+=$(DBGCFLAGS) \
 	  -std=c++23 -gdwarf-4 \
 	  -Wall -Wextra -pedantic \
 	  -Wno-missing-field-initializers \
-	  $(INCLUDES) \
- -DDOCTEST_CONFIG_DISABLE
+	  $(INCLUDES)
+# -DDOCTEST_CONFIG_DISABLE
 ifeq ($(CXX),clang)
 	CPPFLAGS+=
 else
