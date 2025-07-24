@@ -20,6 +20,7 @@ CFLAGS+=$(DBGCFLAGS) \
 	-fno-omit-frame-pointer -fPIC \
 	-fvisibility=hidden -fvisibility-inlines-hidden \
 	-fdebug-prefix-map=.=$(shell readlink -f .) \
+	-fsanitize=address \
 	-std=gnu99 -gdwarf-4 \
 	-Wall -Wextra -pedantic \
 	-Werror-implicit-function-declaration \
