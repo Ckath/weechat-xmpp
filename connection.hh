@@ -34,6 +34,10 @@ namespace weechat {
             : m_conn(ctx), account(acc) {
         }
 
+        void reset(libstrophe::context &ctx) {
+            m_conn.create(*ctx);
+        }
+
         inline operator xmpp_conn_t*() {
             return m_conn;
         }

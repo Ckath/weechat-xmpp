@@ -408,8 +408,10 @@ void weechat::account::reset()
 {
     if (connection)
     {
-        if (xmpp_conn_is_connected(connection))
+        if (xmpp_conn_is_connected(connection)) {
             xmpp_disconnect(connection);
+            connection.reset(context);
+        }
     }
 
     is_connected = 0;
