@@ -62,9 +62,8 @@
 * Building
 
   #+begin_src sh
-  git clone --depth 1 https://github.com/bqv/weechat-xmpp.git
+  git clone https://github.com/bqv/weechat-xmpp.git
   cd weechat-xmpp
-  git submodule update --init --recursive
   make
   make install
   #+end_src
